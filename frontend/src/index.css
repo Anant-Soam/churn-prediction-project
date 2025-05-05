@@ -1,0 +1,211 @@
+@import "tailwindcss";
+/* Tailwind Dark Mode */
+/* Dark background for the whole page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark gradient */
+}
+
+/* Broader Glassmorphic Box */
+/* Change Background Color of Login Box */
+.glass {
+    background: #000; /* Pure black */
+    border-radius: 12px;
+    padding: 40px;
+    width: 600px;
+    text-align: center;
+    color: #fff; /* White text for contrast */
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.8); /* Pink glow */
+    border: 2px solid rgba(243, 31, 225, 0.6); /* Neon pink border */
+    animation: glow 1.5s infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px rgba(255, 20, 147, 0.8);
+    }
+}  
+
+/* Styling for the select dropdown */
+.glass select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+  color: white;
+  border: 2px solid rgba(243, 31, 225, 0.6); /* Neon pink border */
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Dropdown option styling */
+.glass select option {
+  background: #000; /* Black background for options */
+  color: white; /* White text for contrast */
+  padding: 10px;
+}
+
+/* Hover and Focus effects */
+.glass select:hover,
+.glass select:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Fix dropdown menu visibility */
+.glass select:focus option {
+  background: rgba(0, 0, 0, 0.9); /* Darker background */
+  color: white;
+}
+
+  
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  color: white;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Error Messages */
+.text-red-500 {
+  font-size: 0.9rem;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.register-container {
+  background: black;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 5px rgba(255, 0, 255, 0.7); /* Pink glowing effect */
+  width: 500px; /* Increased width */
+  margin: 50px auto;
+  text-align: center;
+}
+
+.register-container h2 {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.register-container input,
+.register-container select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background: #f0f4ff; /* Light background */
+  font-size: 16px;
+  color: black; /* Ensures text is visible */
+}
+
+.register-container input::placeholder {
+  color: black; /* Make placeholder text visible */
+  opacity: 1; /* Ensure it's fully visible */
+  font-weight: 500;
+}
+
+/* General form styling */
+.prediction-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Light transparency */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Input fields */
+.prediction-form input,
+.prediction-form select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: rgba(0, 0, 0, 0.3); /* Dark background */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Change background color when input is focused */
+.prediction-form input:focus,
+.prediction-form select:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Button */
+.prediction-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.prediction-form button:hover {
+    background: #0056b3;
+}
